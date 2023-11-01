@@ -1,0 +1,4 @@
+version=4
+opts="mode=git, pgpmode=gittag, repacksuffix=+ds, dversionmangle=s/\+ds//,repack" \
+https://github.com/alan-turing-institute/CleverCSV.git \
+refs/tags/v([\d\.]+)

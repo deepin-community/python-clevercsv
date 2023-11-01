@@ -1,0 +1,17 @@
+Tabview is currently not packaged in Debian (see BTS #811294). It is listed as
+an optional dependency, but if it's absent, it crashes the whole CLI tool. With
+this patch, only the `clevercsv view` command will fail, instead of the whole
+program.
+Index: python-clevercsv/clevercsv/console/commands/view.py
+===================================================================
+--- python-clevercsv.orig/clevercsv/console/commands/view.py
++++ python-clevercsv/clevercsv/console/commands/view.py
+@@ -61,7 +61,7 @@ class ViewCommand(Command):
+             )
+             return
+ 
+-        import_optional_dependency("tabview", raise_on_missing=True)
++        import_optional_dependency("tabview", raise_on_missing=False)
+         from tabview import view
+ 
+         view(rows)

@@ -1,4 +1,13 @@
 #!/usr/bin/make -f
 
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/buildflags.mk
+
+export PYBUILD_TEST_ARGS= -s tests/test_unit
+
 %:
-	dh $@
+	dh $@ --buildsystem=pybuild
+
+execute_before_dh_sphinxdoc:
+	PYTHONPATH=. sphinx-build -b html docs debian/python3-clevercsv-doc/usr/share/doc/python3-clevercsv-doc/html
