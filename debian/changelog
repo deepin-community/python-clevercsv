@@ -1,5 +1,75 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-clevercsv (0.8.2+ds-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release.
+  * d/patches: refresh 0003.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Louis-Philippe Véronneau <pollo@debian.org>  Sat, 30 Sep 2023 17:48:00 -0400
+
+python-clevercsv (0.8.0+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * d/patches: drop 0002, as the upstream issue was fixed.
+  * d/patches: update 0001 to fix new privacy breach.
+  * d/control: upstream switched from the RTD to the furo Sphix theme.
+  * d/control: Standards-Version update to 4.6.2. No changes needed.
+  * d/control: build using pybuild-plugin-pyproject.
+
+ -- Louis-Philippe Véronneau <pollo@debian.org>  Tue, 13 Jun 2023 15:04:01 -0400
+
+python-clevercsv (0.7.5+ds-1) unstable; urgency=medium
+
+  * New upstream version.
+  * d/patches: refresh 0002.
+  * d/patches: drop 0004 and 0005, as they aren't needed anymore.
+
+ -- Louis-Philippe Véronneau <pollo@debian.org>  Sun, 15 Jan 2023 16:13:31 -0500
+
+python-clevercsv (0.7.4+ds-4) unstable; urgency=medium
+
+  * Team upload.
+  * Add patch to fix FTBFS (Closes: #1027548)
+  * Switch to autopkgtest-pkg-pybuild
+  * Use dh-sequence-*
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Fri, 06 Jan 2023 20:58:15 +0100
+
+python-clevercsv (0.7.4+ds-3) unstable; urgency=medium
+
+  [ Stefano Rivera ]
+  * Team upload.
+  * Patch: Python 3.11 support. (Closes: #1024049)
+
+  [ Louis-Philippe Véronneau ]
+  * d/rules: don't "fail fast" when running tests and run the entire test
+    suite.
+
+ -- Stefano Rivera <stefanor@debian.org>  Wed, 23 Nov 2022 21:17:58 +0200
+
+python-clevercsv (0.7.4+ds-2) unstable; urgency=medium
+
+  * d/python3-clevercsv.manpapges: install manpages in only 1 binary package.
+    (Closes: #1011421)
+  * d/control: Standards-Version update to 4.6.1. No changes.
+
+ -- Louis-Philippe Véronneau <pollo@debian.org>  Sun, 07 Aug 2022 21:16:36 -0400
+
+python-clevercsv (0.7.4+ds-1) unstable; urgency=medium
+
+  * New upstream version.
+  * d/upstream/signing-keys.asc: add upstream's key, as they are now siging
+    tags.
+  * d/rules: install man pages.
+
+ -- Louis-Philippe Véronneau <pollo@debian.org>  Fri, 20 May 2022 16:45:29 -0400
+
+python-clevercsv (0.7.1+ds-2) unstable; urgency=medium
+
+  * Source-only upload. No changes.
+
+ -- Louis-Philippe Véronneau <pollo@debian.org>  Fri, 28 Jan 2022 19:06:51 -0500
+
+python-clevercsv (0.7.1+ds-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #1003035)
+
+ -- Louis-Philippe Véronneau <pollo@debian.org>  Sun, 02 Jan 2022 22:44:35 -0500
