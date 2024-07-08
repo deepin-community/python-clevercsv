@@ -1,3 +1,9 @@
+python-clevercsv (0.8.2+ds-1deepin1) unstable; urgency=medium
+
+  * No source change upload against python 3.12.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Mon, 08 Jul 2024 09:54:36 +0200
+
 python-clevercsv (0.8.2+ds-1) unstable; urgency=medium
 
   * New upstream release.
